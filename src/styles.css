@@ -19,11 +19,45 @@ nav {
 }
 
 .nav-links a:hover {
-    color: rgb(45, 149, 149);
+    color: rgb(75, 124, 74);
 }
 
 
 h3 {
     margin-top: 0em;
 }
+
+label, input {
+    font-size: 1.3em;
+    margin: 1.3em;
+}
+
+h1, h3 {
+    text-align: center;
+    font-size: 1.9em;
+    margin-bottom: 0.2em;
+}
+
+h3 {
+    margin-top: 2em;
+}
+
+#tours {
+    font-size: 1em;
+    text-align: center;
+}
+
+#mainDetails {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+    margin: 1em;    
+}
+
+#addTourBtn{
+    color: rgb(53, 98, 52);
+}
+
 

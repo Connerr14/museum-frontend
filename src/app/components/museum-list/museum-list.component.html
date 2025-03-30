@@ -1,1 +1,25 @@
-<p>museum-list works!</p>
+<h1>Museums</h1>
+<p>Find one to visit today</p>
+<section class="col-lg-6">
+    <ul class="list-group">
+        <li *ngFor="let museum of MUSEUMS" class="list-group-item">
+            <h3>{{ museum.name }}</h3>
+            <!-- Only display price if it is not null -->
+            <h4 *ngIf="museum.admissionPrice"> 
+                ${{ museum.admissionPrice }}
+            </h4>
+            <p *ngIf="museum.location">
+                {{ museum.location }}
+            </p>
+            <div *ngIf="museum.tours && museum.tours.length > 0">
+                <ul>
+                    <li *ngFor="let tour of museum.tours">
+                        <h3>{{ tour.tourName }}</h3>
+                        <p><strong>Guide:</strong> {{ tour.tourGuide }}</p>
+                        <p><strong>Duration:</strong> {{ tour.duration }} hours</p>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</section>

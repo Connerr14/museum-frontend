@@ -13,6 +13,7 @@ export class MuseumService {
   // A method to get all museums
   getMuseums () {
       // Make the api call
+      console.log(this.serverUrl);
       return this.http.get(`${this.serverUrl}/museums`);
   }
   

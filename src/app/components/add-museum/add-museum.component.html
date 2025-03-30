@@ -1,1 +1,50 @@
-<p>add-museum works!</p>
+<h1>Add a New Museum</h1>
+<form (ngSubmit)="submitForm()">
+  <!-- Museum Details -->
+  <section id="mainDetails">
+    <div class="form-group">
+      <label for="name">Museum Name</label>
+      <input type="text" id="name" name="name" class="form-control" placeholder="Enter Museum Name" required [(ngModel)]="name" />
+    </div>
+
+    <div class="form-group">
+      <label for="admissionPrice">Admission Price</label>
+      <input type="number" id="admissionPrice" name="admissionPrice" class="form-control" placeholder="Enter Admission Price" required min="0" [(ngModel)]="admissionPrice" />
+    </div>
+
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" class="form-control" placeholder="Enter Museum Location" required [(ngModel)]="location" />
+    </div>
+  </section>
+
+  <!-- Tour Details -->
+  <div id="tours">
+    <h3>Add Museum Tour Events</h3>
+    <div *ngFor="let tour of tours; let i = index" class="tour">
+      <div class="form-group">
+        <label>Tour Name</label>
+        <input type="text" [(ngModel)]="tour.tourName" name="tourName-{{i}}" class="form-control" placeholder="Enter Tour Name" required />
+      </div>
+
+      <div class="form-group">
+        <label>Tour Guide</label>
+        <input type="text" [(ngModel)]="tour.tourGuide" name="tourGuide-{{i}}" class="form-control" placeholder="Enter Tour Guide" required />
+      </div>
+
+      <div class="form-group">
+        <label>Duration (in hours)</label>
+        <input type="number" [(ngModel)]="tour.duration" name="duration-{{i}}" class="form-control" placeholder="Enter Tour Duration" required min="0" />
+      </div>
+
+      <button type="button" class="btn btn-danger" (click)="removeTour(i)">Remove Tour</button>
+    </div>
+
+    <button type="button" class="btn btn-secondary" (click)="addTour()">Add Another Tour</button>
+  </div>
+
+  <!-- Submit Button -->
+  <div class="buttons">
+    <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
