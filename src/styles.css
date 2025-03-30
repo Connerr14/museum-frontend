@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+}
+nav {
+    width: 100%;
+    background-color: rgb(51, 50, 48);
+    padding: 2em;
+}
+
+.nav-links {
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: rgb(45, 149, 149);
+}
+
+
+h3 {
+    margin-top: 0em;
+}
+
