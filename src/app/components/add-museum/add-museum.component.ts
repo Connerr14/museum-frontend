@@ -58,7 +58,6 @@ export class AddMuseumComponent implements OnInit {
         location: this.location,
         tours: this.tours
       };
-      console.log('Submitted Museum:', newMuseum);
       this.service.addMuseum(newMuseum).subscribe(response => {
         this.resetForm();
       })
