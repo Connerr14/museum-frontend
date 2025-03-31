@@ -1,5 +1,6 @@
-<section class="col-lg-6">
-    <ul>
+<section class="col-lg-6" id="editSection">
+    <h1>Edit</h1>
+    <ul id="edit">
         <li *ngFor="let museum of MUSEUMS">
             <fieldset>
                 <label for="name">Name: * </label>
@@ -13,7 +14,7 @@
                 <label for="name">Location: * </label>
                 <input required [(ngModel)]="location">    
             </fieldset>
-            <fieldset>
+            <fieldset id="toursInfo">
                 <div *ngFor="let tour of tours">
                     <label for="tourName">Tour Name: *</label>
                     <input [(ngModel)]="tour.tourName">
@@ -28,4 +29,4 @@
 </section>
 <h5 [ngClass]="messageClass"> {{message}} </h5>
 <button (click)="update()">Save</button>
-<a routerLink="museum">Back</a>
+<a routerLink="/museum" class="backBtn">Back</a>

@@ -84,7 +84,7 @@ export class MuseumListComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Get the cheeses on component init
+    // Get the museums on component init
     this.getMuseums();
   }
 
