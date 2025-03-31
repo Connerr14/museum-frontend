@@ -16,6 +16,6 @@ export const routes: Routes = [
         path: "addMuseum", component: AddMuseumComponent
     },
     {
-        path: "editMuseum", component: EditMuseumComponent
+        path: "editMuseum/:id", component: EditMuseumComponent
     }
 ];

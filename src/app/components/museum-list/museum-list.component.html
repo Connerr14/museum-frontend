@@ -3,7 +3,7 @@
 <section class="col-lg-6">
     <ul class="list-group">
         <li *ngFor="let museum of MUSEUMS" class="list-group-item">
-            <h3>{{ museum.name }}</h3>
+            <h3 (click)="selectMuseum(museum)">{{ museum.name }}</h3>
             <!-- Only display price if it is not null -->
             <h4 *ngIf="museum.admissionPrice"> 
                 ${{ museum.admissionPrice }}
@@ -20,6 +20,10 @@
                     </li>
                 </ul>
             </div>
+            <button (click)="delete(museum._id)">Delete</button>
+            <a class="editMuseum" [routerLink]='["/editMuseum", museum._id]'>Edit</a>
         </li>
+
     </ul>
 </section>
+

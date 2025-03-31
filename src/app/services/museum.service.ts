@@ -16,6 +16,10 @@ export class MuseumService {
       console.log(this.serverUrl);
       return this.http.get(`${this.serverUrl}/museums`);
   }
+
+  getMuseumById(_id: string) {
+    return this.http.get(`${this.serverUrl}/museums/${_id}`);
+  }
   
   // A method to add a museum
   addMuseum (museum: any) {

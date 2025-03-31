@@ -1,5 +1,4 @@
 <h1>Add a New Museum</h1>
-<form (ngSubmit)="submitForm()">
   <!-- Museum Details -->
   <section id="mainDetails">
     <div class="form-group">
@@ -40,11 +39,10 @@
       <button type="button" class="btn btn-danger" (click)="removeTour(i)">Remove Tour</button>
     </div>
 
-    <button type="button" class="btn btn-secondary" (click)="addTour()">Add Another Tour</button>
+    <button id="addTourBtn" type="button" class="btn btn-secondary" (click)="addTour()">Add Another Tour</button>
   </div>
-
   <!-- Submit Button -->
   <div class="buttons">
-    <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+    <button id="submitButton" type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button>
   </div>
-</form>
+
